@@ -6,3 +6,7 @@ function: process_positional
 positional parameters: [10, 20, 'test']
 keyword parameters: none
 return: True
+function: process_keywords
+positional parameters: none
+keyword parameters: {'first': 'Alice', 'role': 'Admin'}
+return: <function logger_decorator at 0x1074af270>

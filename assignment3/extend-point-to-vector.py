@@ -15,7 +15,7 @@ class Point:
     def __str__(self):
         return f"Point({self.x}, {self.y})"
 
-    def distance_to(self, other):
+    def distance(self, other):
         return math.sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2)
     
 class Vector(Point):
@@ -38,7 +38,7 @@ if __name__ == "__main__":
     print("p2:", p2)
     print("p1 == p2:", p1 == p2)
     print("p1 == p3:", p1 == p3)
-    print("Euclidean distance between p1 and p2:", p1.distance_to(p2))
+    print("Euclidean distance between p1 and p2:", p1.distance(p2))
 
     print("-" * 40)
 

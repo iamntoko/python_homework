@@ -33,6 +33,7 @@ def say_hello():
 def process_positional(*args):
     return True
 
+@logger_decorator
 def process_keywords(**kwargs):
     return logger_decorator
 
