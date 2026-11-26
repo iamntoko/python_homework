@@ -1,0 +1,10 @@
+Assignment 8 Challenges and Resolutions
+
+1. Virtual Environment & Missing Dependencies
+When running get_books.py in the assignment8 environment, Python raised a ModuleNotFoundError because required packages were not installed yet. I resolved this by installing pandas, selenium, and webdriver-manager into the active environment and re-running the script.
+
+2. Locating the Actual OWASP Top 10 List Across Redirects and Tabs
+Starting at https://owasp.org/www-project-top-ten/ redirected to owasp.org/projects/top-ten, where initial XPath checks only matched sidebar or overview links instead of the 10 ranked risks. Navigating to the OWASP Top 10 2025 release page (https://top10.owasp.org/2025/) and inspecting the DOM in Chrome DevTools showed the 10 items inside an ordered list under the Top 10:2025 List heading, allowing an XPath expression that cleanly extracted all 10 titles and href links.
+
+3. Ethical Scraping Checks & Extracting Non-Text Attributes
+Checking robots.txt showed how sites communicate crawling boundaries and bot-specific rules before scraping. For structured extraction, relying only on plain element text was not always enough—such as reading full book titles from attributes, parsing star ratings from CSS class names, normalizing whitespace in titles, and exporting CSV/JSON files without unwanted index columns.

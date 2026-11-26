@@ -1,0 +1,10 @@
+# Task 5: Ethical Web Scraping - Wikipedia Robots.txt Analysis
+
+1. Which sections of the website are restricted for crawling?
+In the snippet examined from Wikipedia's robots.txt, affected crawlers have "Disallow: /", meaning access to the entire site (all paths starting at "/") is disallowed for them, whereas user agents like IsraBot and Orthogaffe have a blank "Disallow:" line placing no path restriction on them in this section.
+
+2. Are there specific rules for certain user agents?
+Yes. Rather than relying solely on a general wildcard rule, this section sets rules for named user agents—such as blocking bots and mirroring/fetching tools like MJ12bot, Mediapartners-Google*, and wget with "Disallow: /", while leaving "Disallow:" blank for IsraBot and Orthogaffe.
+
+3. Reflection on robots.txt and Ethical Scraping:
+Websites use robots.txt to communicate crawling permissions, restricted areas, and server-load boundaries to automated clients before requests are made. Honoring these directives—alongside reasonable request pacing and transparent identification—helps protect site performance and bandwidth while keeping data collection ethical and respectful of site owners.
